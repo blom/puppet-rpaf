@@ -9,6 +9,17 @@ describe "rpaf" do
   it { should contain_file(config_file).
               with_ensure("present") }
 
+  context "default configuration file" do
+    it { should contain_file(config_file).
+                with_content(/^RPAFenable On$/) }
+    it { should contain_file(config_file).
+                with_content(/^RPAFsethostname On$/) }
+    it { should contain_file(config_file).
+                with_content(/^RPAFproxy_ips 127.0.0.1 ::1$/) }
+    it { should contain_file(config_file).
+                with_content(/^RPAFheader X-Forwarded-For$/) }
+  end
+
   context "parameters" do
     context "when package is 'rpaf'" do
       let(:params) { {:package => "rpaf"} }
