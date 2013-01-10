@@ -1,0 +1,8 @@
+name "blom-rpaf"
+version "0.0.0"
+author "Ørjan Blom"
+project_page "https://github.com/blom/puppet-rpaf"
+source "https://github.com/blom/puppet-rpaf"
+license "ISC"
+summary "mod_rpaf module"
+description "mod_rpaf module"
