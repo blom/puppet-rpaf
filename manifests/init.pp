@@ -9,13 +9,13 @@ class rpaf(
   $header      = 'X-Forwarded-For'
 ) {
   $real_enable = $enable ? {
-    true  => "On",
-    false => "Off",
+    true  => 'On',
+    false => 'Off',
   }
 
   $real_sethostname = $sethostname ? {
-    true  => "On",
-    false => "Off",
+    true  => 'On',
+    false => 'Off',
   }
 
   package { $package:
