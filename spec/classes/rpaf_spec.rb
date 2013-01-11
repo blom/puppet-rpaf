@@ -11,6 +11,8 @@ describe "rpaf" do
 
   context "default configuration file" do
     it { should contain_file(config_file).
+                with_content(/\A<IfModule rpaf_module>$/) }
+    it { should contain_file(config_file).
                 with_content(/^RPAFenable On$/) }
     it { should contain_file(config_file).
                 with_content(/^RPAFsethostname On$/) }
@@ -31,6 +33,12 @@ describe "rpaf" do
       it { should contain_package("libapache2-mod-rpaf").
                   with_before(%r[^File.*/etc/rpaf.conf]) }
       it { should contain_file("/etc/rpaf.conf") }
+    end
+
+    context "when ifmodule is rpaf" do
+      let(:params) { {:ifmodule => "rpaf"} }
+      it { should contain_file(config_file).
+                  with_content(/\A<IfModule rpaf>$/) }
     end
 
     context "when enable is true" do
