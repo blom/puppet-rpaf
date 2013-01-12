@@ -8,6 +8,11 @@ puppet-rpaf
 
 Puppet module for installing and configuring [mod_rpaf][1].
 
+Installation
+------------
+
+    puppet module install blom/rpaf
+
 Usage
 -----
 
