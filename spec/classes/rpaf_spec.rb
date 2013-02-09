@@ -4,7 +4,7 @@ describe "rpaf" do
   let(:config_file) { "/etc/apache2/mods-available/rpaf.conf" }
 
   it { should contain_package("libapache2-mod-rpaf").
-              with_ensure("installed").
+              with_ensure("present").
               with_before(%r[^File.*#{config_file}]) }
   it { should contain_file(config_file).
               with_ensure("present") }

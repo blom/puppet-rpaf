@@ -19,7 +19,7 @@ class rpaf(
   }
 
   package { $package:
-    ensure => installed,
+    ensure => present,
     before => File[$config_file],
   }
 
