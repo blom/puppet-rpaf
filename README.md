@@ -1,7 +1,7 @@
 puppet-rpaf
 ===========
 
-[![Build Status](https://secure.travis-ci.org/blom/puppet-rpaf.png)](https://travis-ci.org/blom/puppet-rpaf)
+[![Build Status](https://travis-ci.org/blom/puppet-rpaf.png)](https://travis-ci.org/blom/puppet-rpaf)
 
 * [Homepage](https://github.com/blom/puppet-rpaf)
 * [Puppet Forge](https://forge.puppetlabs.com/blom/rpaf)
