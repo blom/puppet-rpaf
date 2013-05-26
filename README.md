@@ -6,7 +6,7 @@ puppet-rpaf
 * [Homepage](https://github.com/blom/puppet-rpaf)
 * [Puppet Forge](https://forge.puppetlabs.com/blom/rpaf)
 
-Puppet module for installing and configuring [mod_rpaf][1].
+Puppet module for [mod_rpaf][1].
 
 Installation
 ------------
@@ -16,22 +16,20 @@ Installation
 Usage
 -----
 
-    class { 'rpaf': }
-
-Defined parameters and their defaults:
-
-    package      'libapache2-mod-rpaf'
-    config_file  '/etc/apache2/mods-available/rpaf.conf'
-    ifmodule     'rpaf_module'
-    enable       true
-    sethostname  true
-    proxy_ips    ['127.0.0.1', '::1']
-    header       'X-Forwarded-For'
-
-So to change header to X-Real-IP:
-
     class { 'rpaf':
-      header => 'X-Real-IP',
     }
+
+Takes the following optional attributes:
+
+* `package`: Package name (default: `libapache2-mod-rpaf`).
+* `config_file`: Configuration file
+   (default: `/etc/apache2/mods-available/rpaf.conf`).
+* `ifmodule`: Module identifier or filename (default: `rpaf_module`).
+* `enable`: Enable rpaf (default: `true`).
+* `sethostname`: Define `Host` from `X-Host` (default: `true`).
+* `proxy_ips`: Proxy IPs (default: `['127.0.0.1', '::1']`).
+* `header`: Header containing the remote address (default: `X-Forwarded-For`).
+
+See the [rpaf documentation][1] for more information.
 
 [1]: http://stderr.net/apache/rpaf/
