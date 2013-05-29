@@ -1,6 +1,6 @@
-<IfModule <%= ifmodule %>>
-RPAFenable <%= real_enable %>
-RPAFsethostname <%= real_sethostname %>
-RPAFproxy_ips <%= proxy_ips.join(" ") %>
-RPAFheader <%= header %>
+<IfModule <%= @ifmodule %>>
+RPAFenable <%= @real_enable %>
+RPAFsethostname <%= @real_sethostname %>
+RPAFproxy_ips <%= @proxy_ips.join(" ") %>
+RPAFheader <%= @header %>
 </IfModule>
