@@ -11,7 +11,13 @@ Puppet module for [mod_rpaf][1].
 Installation
 ------------
 
+### Puppet Forge
+
     puppet module install blom/rpaf
+
+### Puppetfile
+
+    mod "rpaf", :git => "https://github.com/blom/puppet-rpaf.git"
 
 Usage
 -----
