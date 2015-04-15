@@ -35,7 +35,7 @@ Takes the following optional attributes:
 * `sethostname`: Define `Host` from `X-Host` (default: `true`).
 * `proxy_ips`: Proxy IPs (default: `['127.0.0.1', '::1']`).
 * `header`: Header containing the remote address (default: `X-Forwarded-For`).
-
+* `template_file`: To set template file (default: `rpaf/rpaf.conf.erb`)
 See the [rpaf documentation][1] for more information.
 
 [1]: http://stderr.net/apache/rpaf/
